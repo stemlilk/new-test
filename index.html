@@ -174,16 +174,24 @@
 			</div>
 
 			<!-- 播放器部件 -->
-			<div id="music-container">
-				<div class="music-info">
-					<span class="music-name" style="font-size: 0.8rem; font-weight: bold;">鸣潮先约电台</span>
-					<span id="volume-display">音量: 50%</span>
-				</div>
-				<div class="volume-slider-wrapper">
-					<input type="range" id="volume-slider" min="0" max="100" value="50">
-				</div>
-				<audio id="bgm" loop>
-					<source src="music/鸣潮先约电台 _ jixwang _ Tarokiki _ Emi Evans - 远航星的告别_L.ogg" type="audio/ogg">
+		<div id="music-container">
+    <div class="music-info">
+        <span class="music-name">鸣潮先约电台</span>
+        <span id="volume-display">音量: 50%</span>
+    </div>
+    
+    <div class="volume-slider-wrapper">
+        <input type="range" id="volume-slider" min="0" max="100" value="50">
+    </div>
+
+    <audio id="bgm" loop>
+        <source src="music/鸣潮先约电台 _ jixwang _ Tarokiki _ Emi Evans - 远航星的告别_L.ogg" type="audio/ogg">
+    </audio>
+
+    <button id="music-btn" onclick="toggleMusic()">
+        <i id="music-icon" class="fa-solid fa-play"></i>
+    </button>
+		</div>
 				</audio>
 				<button id="music-btn" onclick="toggleMusic()">
 					<i id="music-icon" class="fa-solid fa-play"></i>
