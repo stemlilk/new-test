@@ -4684,6 +4684,93 @@ input, select, textarea {
 			transform: translateX(0);
 			box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
 			visibility: visible;
+			/* --- 3. 底部长条播放器 --- */
+#music-container {
+    position: fixed;
+    bottom: 0; /* 贴紧底部 */
+    left: 0;
+    width: 100%; /* 占满宽度 */
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 左右两端对齐 */
+    padding: 0.5rem 2rem; /* 减小上下 padding 变扁平 */
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* 只留顶部边框 */
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.music-info {
+    display: flex;
+    flex-direction: row; /* 改为横向排列 */
+    align-items: center;
+    gap: 15px; /* 间距 */
+    color: #fff;
+    flex: 1;
+}
+
+.music-name {
+    font-size: 0.85rem !important;
+    white-space: nowrap;
+}
+
+#volume-display { 
+    font-size: 0.75rem; 
+    opacity: 0.8; 
+    min-width: 60px;
+}
+
+/* 进度条/音量条容器 */
+.volume-slider-wrapper {
+    flex: 2; /* 占据中间较长空间 */
+    display: flex;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+#volume-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3px; /* 更细的线条 */
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* 滑块球体 */
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #fff !important; 
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+/* 播放按钮 */
+#music-btn {
+    background: #fff;
+    border: none;
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    padding: 0 !important;
+    transition: transform 0.2s ease;
+}
+
+#music-btn:hover {
+    transform: scale(1.1);
+}
 		}
 
 	}
